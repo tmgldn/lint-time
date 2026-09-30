@@ -7,6 +7,9 @@
 ![license](https://img.shields.io/npm/l/lint-time)
 [![install size](https://packagephobia.com/badge?p=lint-time)](https://packagephobia.com/result?p=lint-time)
 
+> **This package will not receive any further updates.** Its functionality is being integrated into
+> a single package, [`lib-easy`](https://www.npmjs.com/package/lib-easy).
+
 **`lint-time`** will run your linters of your choice against the files of your choice (like
 `lint-staged`). It only checks staged files - i.e. files that have changed since the previous
 commit.
@@ -37,6 +40,15 @@ npm install lint-time
 
 ```sh
 npx lint-time
+```
+
+### Activating the git hooks
+
+`simple-git-hooks` requires the git hooks to be enabled manually. Once you have added your
+`simple-git-hooks` configuration to `package.json`, run:
+
+```sh
+npx simple-git-hooks
 ```
 
 ## API
