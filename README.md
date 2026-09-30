@@ -38,9 +38,30 @@ npm install lint-time
 
 ## Usage
 
+Put your scripts inside a `"lint-time"` array inside your `package.json` file.
+
+```
+  // ...
+  "lint-time": [
+    [
+      "*.ts",
+      "npx eslint"
+    ],
+    [
+      "*.{ts,js,cjs,mjs,json}",
+      "npx prettier --ignore-path .gitignore --write"
+    ]
+  ],
+  // ...
+```
+
+And then to run on your staged files:
+
 ```sh
 npx lint-time
 ```
+
+> Note: the array order is respected when a staged file matches multiple scripts
 
 ### Activating the git hooks
 
